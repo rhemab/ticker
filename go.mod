@@ -1,4 +1,4 @@
-module ticker
+module github.com/rhemab/ticker
 
 go 1.23.0
 
