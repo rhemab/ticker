@@ -57,7 +57,7 @@ func getTicker(wg *sync.WaitGroup, ticker string, ch chan<- Stock) {
 		fmt.Println("Visiting", r.URL)
 	})
 	collector.OnError(func(r *colly.Response, e error) {
-		fmt.Println("Error:", e)
+		fmt.Println("Error:", e, ticker)
 	})
 	collector.OnHTML(".livePrice", func(e *colly.HTMLElement) {
 		stock.ticker = ticker
